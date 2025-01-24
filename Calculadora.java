@@ -2,9 +2,8 @@ package com.mycompany.calculadora;
 import javax.swing.*;
 public class Calculadora {
     public static void main(String[] args) {
-        Main operaciones = new Main(); // Crear un objeto de la clase Main
+        Main operaciones = new Main(); 
 
-        // Mostrar el menú en un cuadro de diálogo
         String[] opciones = {"Sumar", "Restar", "Multiplicar", "Dividir"};
         int opcion = JOptionPane.showOptionDialog(null, 
                 "Selecciona una operación:", 
@@ -15,15 +14,12 @@ public class Calculadora {
                 opciones, 
                 opciones[0]);
 
-        // Pedir los números al usuario usando JOptionPane
         double num1 = Double.parseDouble(JOptionPane.showInputDialog("Ingresa el primer número:"));
         double num2 = Double.parseDouble(JOptionPane.showInputDialog("Ingresa el segundo número:"));
 
-        // Variable para almacenar el resultado
         double resultado;
 
         try {
-            // Usar el objeto Main para realizar la operación
             switch (opcion) {
                 case 0:
                     resultado = operaciones.sumar(num1, num2);
