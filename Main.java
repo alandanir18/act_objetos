@@ -1,6 +1,5 @@
 package com.mycompany.calculadora;
 public class Main {
-    // Métodos para cada operación
     public double sumar(double a, double b) {
         return a + b;
     }
